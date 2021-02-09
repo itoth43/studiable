@@ -31,7 +31,7 @@ const app = () => {
         option.addEventListener('click', function() {
             fakeDuration = this.getAttribute('data-time');
             timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(fakeDuration % 60)}`;
-            resetPlayer();
+            checkPlaying(song);
         });
     });
 
@@ -40,7 +40,7 @@ const app = () => {
         option.addEventListener('click', function() {
             song.src = this.getAttribute('data-sound');
             video.src = this.getAttribute('data-video');
-            resetPlayer();
+            checkPlaying(song);
         });
     });
 
