@@ -21,6 +21,10 @@ const app = () => {
     outline.style.strokeDasharray = outlineLength;
     outline.style.strokeDashoffset = outlineLength;
 
+    // Load video if it hasnt
+    video.load();
+    video.play();
+
     // Play sound
     play.addEventListener('click', () => {
         checkPlaying(song);
